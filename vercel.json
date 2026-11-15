@@ -5,6 +5,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://ml-14-breast-cancer-api.onrender.com/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
