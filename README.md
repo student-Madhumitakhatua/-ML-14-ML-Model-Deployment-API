@@ -11,7 +11,7 @@ A production-grade Machine Learning inference system serving a trained Breast Ca
 | **Backend API Root** | Render | [https://ml-14-breast-cancer-api.onrender.com/](https://ml-14-breast-cancer-api.onrender.com/) |
 | **Health Check Endpoint** | Render | [https://ml-14-breast-cancer-api.onrender.com/health](https://ml-14-breast-cancer-api.onrender.com/health) |
 | **Interactive API Docs (Swagger)** | Render | [https://ml-14-breast-cancer-api.onrender.com/docs](https://ml-14-breast-cancer-api.onrender.com/docs) |
-| **Frontend Application** | Vercel | *Deployable via Vercel (see deployment guide below)* |
+| **Frontend Application** | Vercel | [https://ml-14-ml-model-deployment-api.vercel.app/](https://ml-14-ml-model-deployment-api.vercel.app/) |
 
 ---
 
