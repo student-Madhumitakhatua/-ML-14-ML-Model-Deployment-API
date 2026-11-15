@@ -31,15 +31,43 @@ ML-14-ML-Model-Deployment-API/
 │   └── train_model.py          # Model training pipeline
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx             # React dashboard with Quick Fill presets, real-time inference
-│   │   ├── App.css             # Healthcare UI styling & responsive design
+│   │   ├── api/
+│   │   │   └── client.js       # API client & local telemetry management
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx      # Top navigation with status badge & auth links
+│   │   │   ├── Footer.jsx      # Multi-column footer & compliance disclaimer
+│   │   │   └── ApiStatusBadge.jsx  # Live Render health check poller
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx # Practitioner session demo context
+│   │   ├── pages/
+│   │   │   ├── Home.jsx        # Healthcare technology landing page
+│   │   │   ├── About.jsx       # Model methodology, WDBC dataset, mathematical specs
+│   │   │   ├── Login.jsx       # Researcher sign in with demo session support
+│   │   │   ├── Signup.jsx      # Clinician registration with demo session support
+│   │   │   ├── Dashboard.jsx   # Practitioner workspace & prediction telemetry
+│   │   │   └── Prediction.jsx  # Dedicated 30-feature FNA inference engine
+│   │   ├── App.jsx             # React Router DOM routing setup
+│   │   ├── App.css             # Healthcare SaaS design system & responsive styling
 │   │   └── main.jsx
-│   ├── vercel.json             # Reverse-proxy rewrite rules to prevent CORS
+│   ├── vercel.json             # Reverse-proxy rewrite rules to prevent CORS + SPA fallback
 │   ├── vite.config.js          # Vite config with dev proxy
-│   └── package.json            # React 19, Lucide icons, Vite
+│   └── package.json            # React 19, React Router DOM, Lucide icons, Vite
 ├── vercel.json                 # Root Vercel build & proxy configuration
 └── README.md
 ```
+
+---
+
+## 🗺️ Frontend Application Routes
+
+| Route | Page | Purpose |
+| :--- | :--- | :--- |
+| `/` | **Home** | Medical AI technology landing page, feature highlights, and workflow overview. |
+| `/about` | **About** | Model architecture (Logistic Regression + StandardScaler), WDBC dataset, and academic disclaimers. |
+| `/prediction` | **Prediction Engine** | Dedicated 30-feature FNA cytology inference form with Quick Fill presets and calibrated confidence meter. |
+| `/dashboard` | **Researcher Dashboard** | Session telemetry, recent prediction history, and quick access actions. |
+| `/login` | **Sign In** | Practitioner authentication interface (with clear demonstration mode notice). |
+| `/signup` | **Sign Up** | Practitioner registration interface (with client-side session persistence). |
 
 ---
 
